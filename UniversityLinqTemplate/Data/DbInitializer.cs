@@ -9,12 +9,10 @@ namespace UniversityLinqTemplate.Data
     {
         public static void Initialize(UniversityContext context)
         {
-            // Создаем базу и таблицы, если файл university.db еще не существует
-            context.Database.EnsureCreated();
-
-            // Если в базе уже есть данные — выходим
-            if (context.Students.Any())
-                return;
+           // удаляем старые данные из БД для перезаписи
+           context.Database.EnsureDeleted();
+           // перезаписываем новые данные
+           context.Database.EnsureCreated();
 
             // 1. Создаем группы
             var group1 = new Group { Name = "ИТ-101", CourseNumber = 1 };
