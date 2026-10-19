@@ -33,7 +33,7 @@ UniversityLinqTemplate/
 
 1. Склонируйте репозиторий найдя в главном окне кнопку клонирования репозитория:
    ```bash
-   git clone https://github.com/odium22/Base-LINQ
+   https://github.com/odium22/Base-LINQ
    ```
 2. Откройте файл `.sln` (или `.slnx`) в **Visual Studio**.
 3. Нажмите комбинацию **`Ctrl + F5`** (Запуск без отладки).
