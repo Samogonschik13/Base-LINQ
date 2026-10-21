@@ -2,7 +2,7 @@
 
 ---
 
-# 📖 README.md (Обновленная версия)
+# 📖 README.md
 
 ```markdown
 # 🪐 Инопланетная колония: LINQ & Entity Framework Core
