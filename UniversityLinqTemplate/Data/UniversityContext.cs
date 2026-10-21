@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UniversityLinqTemplate.Models;
+using ColonyLinq.Models;
 
-namespace UniversityLinqTemplate.Data
+namespace ColonyLinq.Data
 {
     public class UniversityContext : DbContext
     {

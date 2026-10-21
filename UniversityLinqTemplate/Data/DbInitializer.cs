@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Linq;
-using UniversityLinqTemplate.Models;
+using ColonyLinq.Models;
 
-namespace UniversityLinqTemplate.Data
+namespace ColonyLinq.Data
 {
     public static class DbInitializer
     {
         public static void Initialize(UniversityContext context)
         {
-            // ВАЖНО: удаляем старую базу, чтобы создать новую под колонистов
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
 
@@ -33,7 +32,7 @@ namespace UniversityLinqTemplate.Data
             var exp3 = new Expedition { Target = "Сбор кристаллов", Status = "Успешна", Commander = col3 };
             context.Expeditions.AddRange(exp1, exp2, exp3);
 
-            // 4. Ресурсы (4-й модуль!)
+            // 4. Ресурсы
             context.Resources.AddRange(
                 new Resource { Name = "Водяной лёд", ResourceType = "Вода", Quantity = 500, Expedition = exp1 },
                 new Resource { Name = "Железная руда", ResourceType = "Металл", Quantity = 120, Expedition = exp1 },

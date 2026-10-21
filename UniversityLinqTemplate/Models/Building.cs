@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using UniversityLinqTemplate.Data;
+﻿using System.Collections.Generic;
 
-namespace UniversityLinqTemplate.Models
+namespace ColonyLinq.Models
 {
-    public class Colonist
+    public class Building
     {
         public int Id { get; set; }
-        public string FullName { get; set; } = string.Empty;
-        public string Profession { get; set; } = string.Empty; // Инженер, Геолог, Ботаник
-        public int CyclesLived { get; set; }                   // Возраст в циклах
+        public string Name { get; set; } = string.Empty;
+        public string Type { get; set; } = string.Empty;
+        public int Condition { get; set; }
 
-        // Связь со зданием
-        public int BuildingId { get; set; }
-        public Building? Building { get; set; }
-
-        // Связь с вылазками (колонист может быть командиром в нескольких)
-        public List<Expedition> Expeditions { get; set; } = new();
+        public List<Colonist> Colonists { get; set; } = new();
     }
 }

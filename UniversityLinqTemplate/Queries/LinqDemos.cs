@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using UniversityLinqTemplate.Data;
+using ColonyLinq.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace UniversityLinqTemplate.Queries
+namespace ColonyLinq.Queries
 {
     public static class LinqDemos
     {

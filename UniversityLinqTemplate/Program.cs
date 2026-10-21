@@ -1,6 +1,6 @@
 ﻿using System;
-using UniversityLinqTemplate.Data;
-using UniversityLinqTemplate.Queries;
+using ColonyLinq.Data;
+using ColonyLinq.Queries;
 
 using var db = new UniversityContext();
 DbInitializer.Initialize(db);
