@@ -1,21 +1,15 @@
-﻿using UniversityLinqTemplate.Data;
+﻿using System;
+using UniversityLinqTemplate.Data;
 using UniversityLinqTemplate.Queries;
 
-Console.Title = "LINQ Template - University Edition";
+using var db = new UniversityContext();
+DbInitializer.Initialize(db);
 
-using (var db = new UniversityContext())
-{
-    Console.WriteLine("Инициализация базы данных SQLite...");
-    DbInitializer.Initialize(db);
-    Console.WriteLine("База данных готова к работе!");
+LinqDemos.DemoFilteringAndSorting(db);
+LinqDemos.DemoProjection(db);
+LinqDemos.DemoAggregations(db);
+LinqDemos.DemoGrouping(db);
+LinqDemos.DemoJoinsAndIncludes(db);
 
-    // Запуск примеров LINQ
-    LinqDemos.DemoFilteringAndSorting(db);
-    LinqDemos.DemoProjection(db);
-    LinqDemos.DemoAggregations(db);
-    LinqDemos.DemoGrouping(db);
-    LinqDemos.DemoJoinsAndIncludes(db);
-}
-
-Console.WriteLine("\n\nНажмите любую клавишу для завершения...");
+Console.WriteLine("\nНажмите любую клавишу для выхода...");
 Console.ReadKey();

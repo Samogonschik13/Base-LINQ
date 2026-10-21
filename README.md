@@ -102,3 +102,6 @@ public DbSet<ServiceOrder> ServiceOrders => Set<ServiceOrder>();
 * **Ошибка: `SQLite Error 1: no such table...`**  
   Вы изменили модели, но база осталась старой. Удалите файл `university.db` из папки `bin/Debug/net...` или раскомментируйте `context.Database.EnsureDeleted()` в `DbInitializer.cs`.
 ```
+#   B a s e - L I N Q  
+ #   B a s e - L I N Q  
+ 

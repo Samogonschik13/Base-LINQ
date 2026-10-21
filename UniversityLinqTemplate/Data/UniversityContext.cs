@@ -1,22 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UniversityLinqTemplate.Models;
 
 namespace UniversityLinqTemplate.Data
 {
     public class UniversityContext : DbContext
     {
-        public DbSet<Student> Students => Set<Student>();
-        public DbSet<Group> Groups => Set<Group>();
-        public DbSet<Course> Courses => Set<Course>();
-        public DbSet<Grade> Grades => Set<Grade>();
+        // Регистрируем наши новые таблицы
+        public DbSet<Building> Buildings => Set<Building>();
+        public DbSet<Colonist> Colonists => Set<Colonist>();
+        public DbSet<Expedition> Expeditions => Set<Expedition>();
+        public DbSet<Resource> Resources => Set<Resource>();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // База данных сохранится в локальный файл university.db в папке программы
-            optionsBuilder.UseSqlite("Data Source=university.db");
+            // База теперь будет называться colony.db
+            optionsBuilder.UseSqlite("Data Source=colony.db");
         }
     }
 }
